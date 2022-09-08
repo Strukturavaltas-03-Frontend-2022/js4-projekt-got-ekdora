@@ -1,0 +1,86 @@
+@font-face {
+	font-family: Hiatus;
+	src: url("assets/fonts/Hiatus/Hiatus.ttf");
+}
+
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: 0.25rem;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: 700
+}
+
+.got {
+    height: 94vh;
+    padding-left: 3%;
+    padding-right: 23%;
+    padding-top: calc(100vh * 0.03);
+    padding-bottom: calc(100vh * 0.03);
+    column-gap: calc(44% / 7);
+    background-image: url('../assets/site/mapblue.jpg');
+    background-size: cover;
+}
+
+.got__pic {
+    width: 7%;
+    max-height: 12vh;
+}
+
+.img-size {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.img-name {
+    font-size: 0.5rem;
+}
