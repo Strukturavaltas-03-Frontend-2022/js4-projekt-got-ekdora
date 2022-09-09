@@ -57,22 +57,34 @@ body {
 }
 
 .font-bold {
-    font-weight: 700
+    font-weight: 700;
 }
 
 .got {
-    height: 94vh;
     padding-left: 3%;
-    padding-right: 23%;
-    padding-top: calc(100vh * 0.03);
-    padding-bottom: calc(100vh * 0.03);
-    column-gap: calc(44% / 7);
     background-image: url('../assets/site/mapblue.jpg');
     background-size: cover;
 }
 
+.got__map {
+    max-width: 73%;
+    height: 94vh;
+    padding-top: calc(100vh * 0.03);
+    padding-bottom: calc(100vh * 0.03);
+    padding-right: 2%;
+    column-gap: calc(36% / 7);
+}
+
+
+.got__sidebar {
+    height: 100vh;
+    min-width: 25%;
+    max-width: 25%;
+    background-color: darkgrey;
+}
+
 .got__pic {
-    width: 7%;
+    width: 8%;
     max-height: 12vh;
 }
 
@@ -83,4 +95,24 @@ body {
 
 .img-name {
     font-size: 0.5rem;
+}
+
+.got__search {
+    margin-bottom: 1rem;
+}
+
+.got__title {
+
+}
+
+.got__char-info {
+    padding: 5%;
+}
+
+.char-img {
+    width: 100%;
+}
+
+.char-bio {
+
 }
