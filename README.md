@@ -29,9 +29,9 @@ Amennyiben nincs ilyen név, kiírja: "Character not found".
 Plusz:
 
 1. Font Awesome vagy egyéb ikonok használata a keresőmezőnél
-2. Használj saját betűkészletet a szövegek megjelenítéséhez
+2. Használj saját betűkészletet a szövegek megjelenítéséhez ??
 3. A karakterek képeinek/nevének szövege legyen valamilyen effekttel ellátva, amikor föléjük viszem a kurzort
 4. A karakterek képeinek/nevének szövege legyen valamilyen effekttel ellátva, amikor az adott karakter van kiválasztva
-5. Legyen reszponzív a megjelenés   
+5. Legyen reszponzív a megjelenés ?? mobile
 ---
 SZÜKSÉGES FÁJLOK: [got-project.zip](https://s3.amazonaws.com/thinkific/file_uploads/219412/attachments/24a/a33/ad6/got-project.zip)
