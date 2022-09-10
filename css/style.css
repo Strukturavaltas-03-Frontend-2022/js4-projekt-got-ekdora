@@ -1,6 +1,6 @@
 @font-face {
-	font-family: Hiatus;
-	src: url("assets/fonts/Hiatus/Hiatus.ttf");
+    font-family: GOT;
+    src: url("../fonts/game-of-thrones/Game of Thrones.ttf");
 }
 
 body {
@@ -68,39 +68,42 @@ body {
 }
 
 .got {
-    padding-left: 3%;
     background-image: url('../assets/site/mapblue.jpg');
     background-size: cover;
 }
 
 .got__map {
-    max-width: 73%;
+    max-width: 70%;
     height: 94vh;
     padding-top: calc(100vh * 0.03);
     padding-bottom: calc(100vh * 0.03);
-    padding-right: 2%;
-    column-gap: calc(36% / 7);
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    column-gap: calc(44% / 7);
+    row-gap: calc((20vh) / 5);
 }
 
 .got__sidebar {
     height: 100vh;
     min-width: 25%;
     max-width: 25%;
-    background-color: rgb(56,56,56);
+    background-color: rgb(56, 56, 56);
 }
 
 .got__pic {
-    width: 8%;
+    width: 7%;
     max-height: 12vh;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .got__pic:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 .got__pic--active {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    font-weight: 900;
 }
 
 .img-size {
@@ -110,37 +113,19 @@ body {
 
 .img-name {
     font-size: 0.5rem;
-}
-
-.got__search {
-    width: 90%;
-    padding: 5%;
-    margin-bottom: 1rem;
-}
-
-.search-btn {
-    width: 12%;
-}
-
-.search-input {
-    width: 80%
-}
-
-.search-error {
-    visibility: hidden;
-}
-
-.search-error--on {
-    visibility: visible;
-    color: red;
+    font-weight: 600;
+    color: rgb(64, 64, 64);
 }
 
 .got__title {
-
+    font-family: GOT;
+    font-size: 0.875rem;
+    color: white;
+    padding: 1rem 0;
 }
 
 .got__char-info {
-    padding: 5%;
+    padding: 0 5%;
 }
 
 .char-img {
@@ -151,11 +136,211 @@ body {
     width: auto;
 }
 
+.char-short {
+    padding: 0.25rem 0 0.5rem 0;
+}
+
+.char-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
 .char-house {
     width: 30px;
     height: 33px;
 }
 
 .char-bio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.875rem;
+    color: white;
+}
 
+.got__search {
+    width: 90%;
+    padding: 5%;
+}
+
+.search-btn {
+    width: 12%;
+    cursor: pointer;
+    border: solid 1px darkgray;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.search-btn:hover {
+    box-shadow: rgba(0, 0, 0) 0px 3px 8px;
+}
+
+.search-input {
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.875rem;
+}
+
+.search-error {
+    height: 1rem;
+    visibility: hidden;
+}
+
+.search-error--on {
+    visibility: visible;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(216, 77, 77);
+}
+
+/* Modal starts here */
+.got__modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal__content {
+    border: 1px solid rgb(110, 110, 110);
+    height: 95vh;
+    min-width: 90%;
+    max-width: 90%;
+    background-color: rgb(56, 56, 56);
+}
+
+.modal__header {
+    font-size: 1rem;
+    padding: 3%;
+}
+
+.modal__title {
+    font-family: GOT;
+    font-size: 0.875rem;
+    color: white;
+}
+
+.modal__close-btn {
+    padding: 0 0.375rem;
+    color: black;
+    background-color: lightgray;
+    cursor: pointer;
+    border: solid 1px darkgray;
+    border-radius: 0.25rem;
+}
+
+.visible-transition {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s linear;
+}
+
+.modal__close-btn:hover {
+    box-shadow: rgba(0, 0, 0) 0px 3px 8px;
+}
+
+.hidden-transition {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .3s, opacity .3s linear;
+}
+
+.modal__search {
+    padding: 3%;
+}
+
+/* Modal ends here */
+
+@media only screen and (max-width: 1023px) {
+    .got__title {
+        font-size: 0.75rem;
+    }
+
+    .char-bio,
+    .search-input {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .got__title {
+        font-size: 0.625rem;
+    }
+
+    .search-error--on {
+        font-size: 0.75rem;
+    }
+
+    .got__sidebar {
+        height: auto;
+    }
+
+    .got__map {
+        max-width: 97%;
+        height: auto;
+        column-gap: calc(40% / 5);
+        padding-right: 3%;
+    }
+
+    .got__pic {
+        width: 10%;
+        max-height: 24vh;
+    }
+
+    .img-name {
+        font-size: 0.5rem;
+    }
+
+    .search-btn {
+        width: 15%;
+    }
+
+    .search-input {
+        width: 70%;
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .got__sidebar {
+        display: none;
+    }
+
+    .got__map {
+        max-width: 90%;
+        column-gap: calc(40% / 3);
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .got__pic {
+        width: 15%;
+        max-height: 24vh;
+    }
+
+    .img-name {
+        font-size: 0.575rem;
+    }
+
+    .got__char-info {
+        padding: 0 3%;
+    }
+
+    .search-error--on {
+        font-size: 0.875rem;
+    }
+
+    .search-btn {
+        width: 10%;
+    }
+
+    .search-input {
+        width: 80%;
+        font-size: 0.875rem;
+    }
 }
